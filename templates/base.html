@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block page_name %}{% endblock page_name %}| Nbnb</title>
+</head>
+<body>
+    {% include "partial/header.html" %}
+
+    {% block content %}{% endblock %}
+
+    {% include "partial/footer.html" %}
+
+</body>
+</html>
