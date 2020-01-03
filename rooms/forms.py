@@ -17,7 +17,7 @@ class SearchForm(forms.Form):
     bedrooms = forms.IntegerField(required=False)
     beds = forms.IntegerField(required=False)
     baths = forms.IntegerField(required=False)
-    intsant_book = forms.BooleanField(required=False)
+    instant_book = forms.BooleanField(required=False)
     superhost = forms.BooleanField(required=False)
     amenities = forms.ModelMultipleChoiceField(
         required=False,
