@@ -7,7 +7,6 @@ from . import forms
 
 
 class LoginView(FormView):
-
     template_name = "users/login.html"
     form_class = forms.LoginForm
     success_url = reverse_lazy("core:home")
@@ -27,3 +26,14 @@ class LoginView(FormView):
 def log_out(request):
     logout(request)
     return redirect(reverse("core:home"))
+
+
+class SignUpView(FormView):
+    template_name = "users/signup.html"
+    form_class = forms.SignUpForm
+    success_url = reverse_lazy("core:home")
+    initial = {
+        "first_name": "KIM",
+        "last_name": "JIHUN",
+        "email": "gmldnr2222@naver.com",
+    }
