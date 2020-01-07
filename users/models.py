@@ -39,7 +39,7 @@ class User(AbstractUser):
     LOGIN_GITHUB = "github"
     LOGIN_KAKAO = "kakao"
 
-    LOGIN_CHOICES = ((LOGIN_EMAIL, "Email"), (LOGIN_GITHUB, "Email"), (LOGIN_KAKAO, "Email"),)
+    LOGIN_CHOICES = ((LOGIN_EMAIL, "Email"), (LOGIN_GITHUB, "Github"), (LOGIN_KAKAO, "Kakao"),)
 
     avatar = models.ImageField(upload_to="avatars", blank=True)
     gender = models.CharField(
