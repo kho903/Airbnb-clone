@@ -8,13 +8,13 @@
 </head>
 <body class="text-gray-800">
     <header class="container max-w-full flex items-center justify-between px-6 h-20 border-b border-gray-300">
-        <div class="flex items-center">
+        <div class="flex items-center w-1/3">
             <a href="{% url "core:home" %}" class="mr-6">
                 <img class="w-8" src="{% static 'img/logo.png' %}" />
             </a>
             {% block search-bar %}
-                <form class="border px-2 py-1 rounded" method="get" action="{% url "rooms:search" %}">
-                    <input name="city" placeholder="Search by City" />
+                <form class="w-9/12" method="get" action="{% url "rooms:search" %}">
+                    <input class="search-box border px-5 py-3 w-full font-medium placeholder-gray-700 rounded w-64 shadow-md hover:shadow-lg focus:outline-none" name="city" placeholder="Search by City" />
                 </form>
             {% endblock search-bar %}
         </div>
