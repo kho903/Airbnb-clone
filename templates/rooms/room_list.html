@@ -6,30 +6,31 @@
 
 {% block content %}
 
-    <div class="container rounded-xl mx-auto bg-gray-800 w-full h-50vh mt-32 mb-24 bg-cover bg-center"
-         style="background: url('https://images.unsplash.com/photo-1517166988974-5e377975dd67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60')">
+    <div class="container mx-auto">
+        <div class="rounded-xl bg-gray-800 h-50vh mt-32 mb-24 bg-cover bg-center"
+             style="background: url('https://images.unsplash.com/photo-1517166988974-5e377975dd67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60')">
+        </div>
 
+        <div class="flex flex-wrap">
+            {% for room in rooms %}
+                {% include 'partial/room_card.html' with room=room %}
+            {% endfor %}
+        </div>
+
+        <h5>
+            {% if page_obj.has_previous %}
+                <a href="/?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+
+            {% if page_obj.has_next %}
+                <a href="/?page={{ page_obj.next_page_number }}">Next</a>
+            {% endif %}
+
+        </h5>
     </div>
 
-    {% for room in rooms %}
-        <h4>
-            <a href="{% url "rooms:detail" room.pk %}">
-                {{ room.name }} / ${{ room.price }}
-            </a>
-        </h4>
-    {% endfor %}
 
-    <h5>
-        {% if page_obj.has_previous %}
-            <a href="/?page={{ page_obj.previous_page_number }}">Previous</a>
-        {% endif %}
-
-        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
-
-        {% if page_obj.has_next %}
-            <a href="/?page={{ page_obj.next_page_number }}">Next</a>
-        {% endif %}
-
-    </h5>
 
 {% endblock %}
