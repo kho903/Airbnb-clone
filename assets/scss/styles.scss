@@ -35,8 +35,24 @@ form {
         @apply bg-red-200 border-gray-400;
         &:focus {
           @apply border-gray-600;
+        }
       }
     }
+  }
+}
+
+.message{
+  &.error{
+    @apply bg-red-600;
+  }
+  &.info{
+    @apply bg-blue-500;
+  }
+  &.success{
+    @apply bg-green-500;
+  }
+  &.warnings{
+    @apply bg-yellow-500;
   }
 }
 
