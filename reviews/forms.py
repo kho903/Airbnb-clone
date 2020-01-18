@@ -1,6 +1,7 @@
 from django import forms
 from . import models
 
+
 class CreateReviewForm(forms.ModelForm):
 
     class Meta:
@@ -14,3 +15,7 @@ class CreateReviewForm(forms.ModelForm):
             "Check_in",
             "Value",
         )
+
+    def save(self):
+        review = super().save(commit=False)
+        return review
