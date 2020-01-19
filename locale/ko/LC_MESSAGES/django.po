@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-19 16:07+0900\n"
+"POT-Creation-Date: 2020-01-19 17:32+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: .\airbnbclone\settings.py:120
+#: .\airbnbclone\settings.py:120 .\users\models.py:29
 msgid "Korean"
 msgstr ""
 
-#: .\airbnbclone\settings.py:121
+#: .\airbnbclone\settings.py:121 .\users\models.py:28
 msgid "English"
 msgstr ""
 
@@ -37,6 +37,75 @@ msgstr "복제하지마시오."
 #: .\templates\partial\footer.html:7
 msgid "All rights reserved"
 msgstr "무단 전재 금지"
+
+#: .\templates\partial\nav.html:8
+msgid "Stop Hosting"
+msgstr "호스팅 중지"
+
+#: .\templates\partial\nav.html:10
+msgid "Start hosting"
+msgstr "호스팅 시작"
+
+#: .\templates\partial\nav.html:15
+msgid "Create Room"
+msgstr "방 만들기"
+
+#: .\templates\partial\nav.html:17
+msgid "Profile"
+msgstr "프로필"
+
+#: .\templates\partial\nav.html:18
+msgid "Log Out"
+msgstr "로그아웃"
+
+#: .\templates\partial\nav.html:20
+msgid "Log In"
+msgstr "로그인"
+
+#: .\templates\partial\nav.html:21
+msgid "Sign Up"
+msgstr "회원 가입"
+
+#: .\templates\rooms\room_list.html:28
+#, python-format
+msgid "Page %(current_page)s of %(total_pages)s"
+msgstr "총 %(total_pages)s 중 %(current_page)s 페이지"
+
+#: .\users\mixins.py:13
+msgid "Can't go there"
+msgstr "갈 수 없는 페이지 입니다."
+
+#: .\users\models.py:20
+msgid "Male"
+msgstr "남"
+
+#: .\users\models.py:21
+msgid "Female"
+msgstr "여"
+
+#: .\users\models.py:22
+msgid "Other"
+msgstr "이외"
+
+#: .\users\models.py:48
+msgid "gender"
+msgstr "성별"
+
+#: .\users\models.py:50 .\users\models.py:53
+msgid "language"
+msgstr "언어"
+
+#: .\users\models.py:51
+msgid "birthdate"
+msgstr "생년월일"
+
+#: .\users\models.py:56
+msgid "currency"
+msgstr "통화"
+
+#: .\users\models.py:74
+msgid "Verify Airbnb Account"
+msgstr "Airbnb 계정을 확인하세요"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"

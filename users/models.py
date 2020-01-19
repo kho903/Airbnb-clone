@@ -1,4 +1,5 @@
 import uuid
+from django.utils.translation import gettext_lazy as _
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
 from django.db import models
@@ -16,16 +17,16 @@ class User(AbstractUser):
     GENDER_OTHER = "other"
 
     GENDER_CHOICES = (
-        (GENDER_MALE, "Male"),
-        (GENDER_FEMALE, "Female"),
-        (GENDER_OTHER, "Other")
+        (GENDER_MALE, _("Male")),
+        (GENDER_FEMALE, _("Female")),
+        (GENDER_OTHER, _("Other"))
     )
 
     Language_ENGLISH = "en"
     Language_KOREAN = "kr"
     Language_CHOICES = (
-        (Language_ENGLISH, "English"),
-        (Language_KOREAN, "Korean")
+        (Language_ENGLISH, _("English")),
+        (Language_KOREAN, _("Korean"))
     )
 
     CURRENCY_USD = "usd"
@@ -44,15 +45,15 @@ class User(AbstractUser):
 
     avatar = models.ImageField(upload_to="avatars", blank=True)
     gender = models.CharField(
-        choices=GENDER_CHOICES, max_length=10, blank=True
+        _("gender"), choices=GENDER_CHOICES, max_length=10, blank=True
     )
-    bio = models.TextField(default="", blank=True)
-    birthdate = models.DateField(blank=True, null=True)
+    bio = models.TextField(_("language"), default="", blank=True)
+    birthdate = models.DateField(_("birthdate"), blank=True, null=True)
     language = models.CharField(
-        choices=Language_CHOICES, max_length=2, blank=True,default=Language_KOREAN
+        _("language"), choices=Language_CHOICES, max_length=2, blank=True,default=Language_KOREAN
     )
     currency = models.CharField(
-        choices=CURRENCY_CHOICES, max_length=3, blank=True,default=CURRENCY_KRW
+        _("currency"), choices=CURRENCY_CHOICES, max_length=3, blank=True,default=CURRENCY_KRW
     )
     superhost = models.BooleanField(default=False)
     email_verified = models.BooleanField(default=False)
@@ -70,7 +71,7 @@ class User(AbstractUser):
                 "emails/verify_email.html", {"secret": secret}
             )
             send_mail(
-                    "Verify Airbnb Account",
+                    _("Verify Airbnb Account"),
                     strip_tags(html_message1),
                     settings.EMAIL_FROM,
                     [self.email],
