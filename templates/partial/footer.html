@@ -7,9 +7,18 @@
         <span>&copy; 2020 Nbnb, {% trans "All rights reserved" %}.</span>
     </div>
     <div class="mt-10 flex">
+        {% get_current_language as LANGUAGE_CODE %}
         <select class="w-1/5" id="js-lang">
-            <option value="en">English</option>
-            <option value="kr">Korean</option>
+            <option value="en"
+                    {% if LANGUAGE_CODE == 'en' %}
+                    selected
+                    {% endif %}
+            >English</option>
+            <option value="ko"
+                    {% if LANGUAGE_CODE == 'ko' %}
+                    selected
+                    {% endif %}
+            >Korean</option>
         </select>
     </div>
 </footer>
