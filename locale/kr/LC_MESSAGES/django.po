@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-19 15:04+0900\n"
+"POT-Creation-Date: 2020-01-19 15:09+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: .\airbnbclone\settings.py:120
 msgid "Korean"
@@ -28,15 +28,15 @@ msgstr ""
 
 #: .\templates\base.html:26
 msgid "Search by City"
-msgstr ""
+msgstr "도시를 검색하세요."
 
 #: .\templates\partial\footer.html:4
 msgid "Please don't copy us."
-msgstr ""
+msgstr "복제하지 마세요."
 
 #: .\templates\partial\footer.html:6
 msgid "All rights reserved"
-msgstr ""
+msgstr "무단 전재 금지"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"
